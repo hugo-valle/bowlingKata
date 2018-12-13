@@ -8,13 +8,15 @@
 
 class Game {
     //int score = 0;
-    int currentRoll = 0;
+    int currentRoll;
     std::array<int, 21> rolls;   // one per roll
-
 public:
+    Game(); // Default Constructor.
     void roll(int frame);
     int scoreGame();
     bool isSpare(int frameIndex);
+    bool isStrike(int frameIndex);
+    int isStrikeBonus(int frameIndex);
 };
 
 
